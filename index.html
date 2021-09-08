@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Grow Tree</title>
+</head>
+
+<body>
+    <div class="home">
+        <i class="fas fa-arrow-left" id="prevBtn"></i>
+        <i class="fas fa-arrow-right" id="nextBtn"></i>
+
+        <div class="slider">
+            <img src="./img/ag4.jpg" id="lastClone" alt="">
+            <img src="./img/ag1.jpg" alt="">
+            <img src="./img/ag2.jpg" alt="">
+            <img src="./img/ag3.jpg" alt="">
+            <img src="./img/ag4.jpg" alt="">
+            <img src="./img/ag1.jpg" id="firstClone" alt="">
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="logo">
+            <span class="bold">Grow</span>
+            <span class="regular">Tree</span>
+        </div>
+        <div class="right">
+            <div class="menuList" id="menuLists">
+                <ul>
+                    <li><a class="link" href="#">Mail</a></li>
+                    <li><a class="link" href="#infor">Info</a></li>
+                    <li><a class="link" href="#contactr">Contact</a></li>
+                    <li><a class="link" href="#">Plant now</a></li>
+                </ul>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="info" class="body">
+
+    </div>
+    <div id="contact" class="content">
+    </div>
+
+    <script>
+        // Add active class to the current button (be selected)
+        var list = document.getElementById("menuLists");
+        var btns = list.getElementsByClassName("link");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                if (current.length > 0) {
+                    current[0].className = current[0].className.replace(" active", "");
+                }
+                this.className += " active";
+                console.log(i)
+            });
+        }
+    </script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
